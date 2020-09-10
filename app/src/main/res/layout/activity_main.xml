@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/covid"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/casesButton"
+        android:layout_width="321dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#A31747"
+        android:onClick="checkCases"
+        android:text="Sprawdź aktualny zasięg wirusa"
+        android:textColor="#F498B8"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/whoButton"
+        android:layout_width="321dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FF4F8B"
+        android:onClick="startWeb"
+        android:tag="gov"
+        android:text="Co jeśli mam podejrzenie wirusa?"
+        android:textColor="#11436A"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/casesButton" />
+
+    <Button
+        android:id="@+id/onetButton"
+        android:layout_width="321dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FD96B9"
+        android:onClick="startWeb"
+        android:tag="onet"
+        android:text="Bieżące informacje z polski"
+        android:textColor="#11436A"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whoButton" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Wszystko o koronawirus..."
+        android:textColor="#E0CFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/epidemicImageView"
+        android:layout_width="105dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onetButton"
+        app:srcCompat="@drawable/epidemicsign" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
